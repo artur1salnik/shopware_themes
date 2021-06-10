@@ -1,0 +1,12 @@
+.cms-block-image-cover-test {
+    margin: 25px calc(-50vw + 50%);
+    height: 470px;
+
+    .cms-block-container {
+        height: 100%;
+
+        .cms-block-container-row {
+            height: 100%;
+        }
+    }
+}

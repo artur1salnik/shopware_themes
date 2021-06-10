@@ -1,0 +1,100 @@
+{% block pet_types %}
+    {% set id = element.id %}
+    <div class="block-pet-types">
+        {% block pet_types_left %}
+            <div class="pet-types-left">
+                    {% set element = block.slots.getSlot('left_image') %}
+                    <div data-cms-element-id="{{ id }}">
+                        {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+                    </div>
+            </div>
+        {% endblock %}
+
+        {% block pet_types_right %}
+            <div class="pet-types-right">
+                <div class="pet-types-right-text">
+                    {% block pet_types_right_text %}
+                        {% set element = block.slots.getSlot('right_text') %}
+                        <div data-cms-element-id="{{ id }}">
+                            {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+                        </div>
+                    {% endblock %}
+                </div>
+                <div class="pet-types-right-categories">
+                    <a href="#" class="pet-types-right-category">
+                        <div class="pet-types-right-category-image">
+                            {% block pet_types_right_category_image_1 %}
+                                {% set element = block.slots.getSlot('right_image_1') %}
+                                <div data-cms-element-id="{{ id }}">
+                                    {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+                                </div>
+                            {% endblock %}
+                        </div>
+                        <div class="pet-types-right-category-text">
+                            {% block pet_types_right_category_text_1 %}
+                                {% set element = block.slots.getSlot('right_text_1') %}
+                                <div data-cms-element-id="{{ id }}">
+                                    {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+                                </div>
+                            {% endblock %}
+                        </div>
+                    </a>
+                    <a href="#" class="pet-types-right-category">
+                        <div class="pet-types-right-category-image">
+                            {% block pet_types_right_category_image_2 %}
+                                {% set element = block.slots.getSlot('right_image_2') %}
+                                <div data-cms-element-id="{{ id }}">
+                                    {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+                                </div>
+                            {% endblock %}
+                        </div>
+                        <div class="pet-types-right-category-text">
+                            {% block pet_types_right_category_text_2 %}
+                                {% set element = block.slots.getSlot('right_text_2') %}
+                                <div data-cms-element-id="{{ id }}">
+                                    {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+                                </div>
+                            {% endblock %}
+                        </div>
+                    </a>
+                    <a href="#" class="pet-types-right-category">
+                        <div class="pet-types-right-category-image">
+                            {% block pet_types_right_category_image_3 %}
+                                {% set element = block.slots.getSlot('right_image_3') %}
+                                <div data-cms-element-id="{{ id }}">
+                                    {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+                                </div>
+                            {% endblock %}
+                        </div>
+                        <div class="pet-types-right-category-text">
+                            {% block pet_types_right_category_text_3 %}
+                                {% set element = block.slots.getSlot('right_text_3') %}
+                                <div data-cms-element-id="{{ id }}">
+                                    {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+                                </div>
+                            {% endblock %}
+                        </div>
+                    </a>
+                    <a href="#" class="pet-types-right-category">
+                        <div class="pet-types-right-category-image">
+                            {% block pet_types_right_category_image_4 %}
+                                {% set element = block.slots.getSlot('right_image_4') %}
+                                <div data-cms-element-id="{{ id }}">
+                                    {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+                                </div>
+                            {% endblock %}
+                        </div>
+                        <div class="pet-types-right-category-text">
+                            {% block pet_types_right_category_text_4 %}
+                                {% set element = block.slots.getSlot('right_text_4') %}
+                                <div data-cms-element-id="{{ id }}">
+                                    {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+                                </div>
+                            {% endblock %}
+                        </div>
+                    </a>
+                </div>
+            </div>
+        {% endblock %}
+    </div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% sw_extends '@Storefront/storefront/layout/navigation/navigation.html.twig' %}
+
+{% block layout_main_navigation %}
+    {% if shopware.theme.activateStickyHeader %}
+        <div class="js-navigation-wrapper"
+             data-sticky-header="true"
+             data-sticky-header-options='{
+            "showOnScrollPosition": "{{ shopware.theme.showOnScrollPosition }}"
+    }'>
+            {{ parent() }}
+        </div>
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}

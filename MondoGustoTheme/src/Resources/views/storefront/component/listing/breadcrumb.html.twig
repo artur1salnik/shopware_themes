@@ -1,0 +1,7 @@
+{% sw_extends '@Storefront/storefront/component/listing/breadcrumb.html.twig' %}
+
+{% block component_listing_breadcrumb_placeholder %}
+    {% if key != breadcrumbKeys|last %}
+        <div class="breadcrumb-placeholder">/</div>
+    {% endif %}
+{% endblock %}

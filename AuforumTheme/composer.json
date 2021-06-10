@@ -1,0 +1,18 @@
+{
+  "name": "swag/theme-skeleton",
+  "description": "Theme skeleton plugin",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "AuforumTheme\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "AuforumTheme\\AuforumTheme",
+    "label": {
+      "de-DE": "Theme AuforumTheme plugin",
+      "en-GB": "Theme AuforumTheme plugin"
+    }
+  }
+}

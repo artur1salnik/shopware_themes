@@ -1,0 +1,30 @@
+{% block sw_cms_block_pet_types %}
+    <div class="sw-cms-block-pet-types">
+        <div class="pet-types-left">
+            <slot name="left_image">{% block sw_cms_block_pet_types_left %}{% endblock %}</slot>
+        </div>
+        <div class="pet-types-right">
+            <div class="pet-types-right-text">
+                <slot name="right_text">{% block sw_cms_block_pet_types_right_text %}{% endblock %}</slot>
+            </div>
+            <div class="pet-types-right-categories">
+                <div class="pet-types-right-category">
+                    <slot name="right_image_1">{% block sw_cms_block_pet_types_right_image_1 %}{% endblock %}</slot>
+                    <slot name="right_text_1">{% block sw_cms_block_pet_types_right_text_1 %}{% endblock %}</slot>
+                </div>
+                <div class="pet-types-right-category">
+                    <slot name="right_image_2">{% block sw_cms_block_pet_types_right_image_2 %}{% endblock %}</slot>
+                    <slot name="right_text_2">{% block sw_cms_block_pet_types_right_text_2 %}{% endblock %}</slot>
+                </div>
+                <div class="pet-types-right-category">
+                    <slot name="right_image_3">{% block sw_cms_block_pet_types_right_image_3 %}{% endblock %}</slot>
+                    <slot name="right_text_3">{% block sw_cms_block_pet_types_right_text_3 %}{% endblock %}</slot>
+                </div>
+                <div class="pet-types-right-category">
+                    <slot name="right_image_4">{% block sw_cms_block_pet_types_right_image_4 %}{% endblock %}</slot>
+                    <slot name="right_text_4">{% block sw_cms_block_pet_types_right_text_4 %}{% endblock %}</slot>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

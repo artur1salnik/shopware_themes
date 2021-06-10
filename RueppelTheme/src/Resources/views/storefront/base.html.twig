@@ -1,0 +1,8 @@
+{% sw_extends '@Storefront/storefront/base.html.twig' %}
+
+{% block base_footer_inner %}
+    <tempate data-fabric-plugin>
+        <canvas id="canvas" width="300" height="300"></canvas>
+    </tempate>
+    {{ parent() }}
+ {% endblock %}

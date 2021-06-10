@@ -1,0 +1,52 @@
+{
+    "name": "NewTheme",
+    "author": "Shopware AG",
+    "views": [
+        "@Storefront",
+        "@Plugins",
+        "@NewTheme"
+    ],
+    "style": [
+        "app/storefront/src/scss/overrides.scss",
+        "@Storefront",
+        "app/storefront/src/scss/base.scss"
+    ],
+    "script": [
+        "@Storefront",
+        "app/storefront/dist/storefront/js/new-theme.js"
+    ],
+    "asset": [
+        "@Storefront",
+        "app/storefront/src/assets"
+    ],
+    "config": {
+        "blocks": {
+            "footerLabels": {
+                "label": {
+                    "en-GB": "Footer labels",
+                    "de-DE": "Footer labels"
+                }
+            }
+        },
+        "fields": {
+            "label_1": {
+                "label": {
+                    "en-GB": "Label 1",
+                    "de-DE": "Label 1"
+                },
+                "block": "footerLabels",
+                "type": "media",
+                "editable": true
+            },
+            "label_2": {
+                "label": {
+                    "en-GB": "Label 2",
+                    "de-DE": "Label 2"
+                },
+                "block": "footerLabels",
+                "type": "media",
+                "editable": true
+            }
+        }
+    }
+}

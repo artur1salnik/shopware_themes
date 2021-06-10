@@ -1,0 +1,37 @@
+{
+    "header": {
+        "searchPlaceholder": "Suche"
+    },
+    "contacts": {
+        "phoneLink": "+49 (0) 7641 / 934 083 0",
+        "openingHours": "Mo. - Fr. 9:00 - 12:00 Uhr",
+        "email": "support@ankermann.com"
+    },
+    "topBar": {
+        "countryOfProduction": "Made in Germany",
+        "experience": "21 Jahre Erfahrung",
+        "guarantee": "4 Jahre Garantie*",
+        "language": "Sprache",
+        "currency": "Wahrung"
+    },
+    "headerActions": {
+        "wishList": "Meine<br><b>merkliste</b>",
+        "account": "Mein<br><b>konto</b>",
+        "B2Bsphere": "B2B<br><b>bereich</b>",
+        "cart": "<b>Warenkorb</b>"
+    },
+    "footer": {
+        "contact": "Kontakt",
+        "questions": "Sie Haben Fragen?",
+        "copyrightInfo": "© ANKERMANN Computer E.K. 1997-2019 | Alle Rechte Vorbehalten"
+    },
+    "footerNewsLetter": {
+        "newsletter": "Ankermann - newsletter",
+        "latestTrends": "Neuste Trends - Exklusive Angebote - Gewinnspiele",
+        "placeholder": "Ihre Email Addresse",
+        "button": "Eintragen"
+    },
+    "footerFollow": {
+        "followUs": "Folgen sie uns:"
+    }
+}

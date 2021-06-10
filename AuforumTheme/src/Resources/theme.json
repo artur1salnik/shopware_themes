@@ -1,0 +1,26 @@
+{
+  "name": "AuforumTheme",
+  "author": "Shopware AG",
+  "views": [
+     "@Storefront",
+     "@Plugins",
+     "@RueppelTheme",
+     "@AuforumTheme"
+  ],
+  "style": [
+    "app/storefront/src/scss/overrides.scss",
+    "@Storefront",
+    "@RueppelTheme",
+    "app/storefront/src/scss/base.scss"
+  ],
+  "script": [
+    "@Storefront",
+    "@RueppelTheme",
+    "app/storefront/dist/storefront/js/auforum-theme.js"
+  ],
+  "asset": [
+    "@Storefront",
+    "@RueppelTheme",
+    "app/storefront/src/assets"
+  ]
+}

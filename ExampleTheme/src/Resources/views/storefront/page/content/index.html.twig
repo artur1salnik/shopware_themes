@@ -1,0 +1,10 @@
+{% sw_extends '@Storefront/storefront/page/content/index.html.twig' %}
+
+{% set exampleThemeOptions = {
+    text: 'Hi. How are you?'
+} %}
+
+{% block base_main_inner %}
+    {{ parent() }}
+    <template data-example-theme data-example-theme-options="{{ exampleThemeOptions | json_encode }}"></template>
+{% endblock %}

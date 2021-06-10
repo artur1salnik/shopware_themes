@@ -1,0 +1,10 @@
+.sw-cms-preview-video-text {
+    display: grid;
+    grid-template-rows: 1fr .2fr;
+    padding: 15px;
+    p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

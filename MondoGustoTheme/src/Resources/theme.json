@@ -1,0 +1,106 @@
+{
+  "name": "MondoGustoTheme",
+  "author": "Shopware AG",
+  "views": [
+     "@Storefront",
+     "@Plugins",
+     "@MondoGustoTheme"
+  ],
+  "style": [
+    "app/storefront/src/scss/overrides.scss",
+    "@Storefront",
+    "app/storefront/src/scss/base.scss"
+  ],
+  "script": [
+    "@Storefront",
+    "app/storefront/dist/storefront/js/mondo-gusto-theme.js"
+  ],
+  "asset": [
+    "@Storefront",
+    "app/storefront/src/assets"
+  ],
+   "config": {
+       "blocks": {
+           "paymentMethods": {
+               "label": {
+                   "en-GB": "Payment methods",
+                   "de-DE": "Zahlungsarten"
+               }
+           }
+       },
+       "fields": {
+           "paymentMethod_1": {
+               "label": {
+                   "en-GB": "Payment method",
+                   "de-DE": "Zahlungsmethode"
+               },
+               "type": "media",
+               "editable": true,
+               "block": "paymentMethods"
+           },
+           "paymentMethod_2": {
+               "label": {
+                   "en-GB": "Payment method",
+                   "de-DE": "Zahlungsmethode"
+               },
+               "type": "media",
+               "editable": true,
+               "block": "paymentMethods"
+           },
+           "paymentMethod_3": {
+               "label": {
+                   "en-GB": "Payment method",
+                   "de-DE": "Zahlungsmethode"
+               },
+               "type": "media",
+               "editable": true,
+               "block": "paymentMethods"
+           },
+           "paymentMethod_4": {
+               "label": {
+                   "en-GB": "Payment method",
+                   "de-DE": "Zahlungsmethode"
+               },
+               "type": "media",
+               "editable": true,
+               "block": "paymentMethods"
+           },
+           "paymentMethod_5": {
+               "label": {
+                   "en-GB": "Payment method",
+                   "de-DE": "Zahlungsmethode"
+               },
+               "type": "media",
+               "editable": true,
+               "block": "paymentMethods"
+           },
+           "paymentMethod_6": {
+               "label": {
+                   "en-GB": "Payment method",
+                   "de-DE": "Zahlungsmethode"
+               },
+               "type": "media",
+               "editable": true,
+               "block": "paymentMethods"
+           },
+           "paymentMethod_7": {
+               "label": {
+                   "en-GB": "Payment method",
+                   "de-DE": "Zahlungsmethode"
+               },
+               "type": "media",
+               "editable": true,
+               "block": "paymentMethods"
+           },
+           "paymentMethod_8": {
+               "label": {
+                   "en-GB": "Payment method",
+                   "de-DE": "Zahlungsmethode"
+               },
+               "type": "media",
+               "editable": true,
+               "block": "paymentMethods"
+           }
+       }
+   }
+}

@@ -1,0 +1,13 @@
+.sw-cms-block-image-text-people-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    .sw-cms-slot {
+        height: auto;
+    }
+    .sw-cms-el-image {
+        img {
+            height: 340px;
+        }
+    }
+}

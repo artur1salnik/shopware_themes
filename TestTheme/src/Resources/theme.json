@@ -1,0 +1,147 @@
+{
+    "name": "TestTheme",
+    "author": "Shopware AG",
+    "description": {
+        "en-GB": "Just another description",
+        "de-DE": "Nur eine weitere Beschreibung"
+    },
+    "views": [
+        "@Storefront",
+        "@Plugins",
+        "@TestTheme"
+    ],
+    "style": [
+        "app/storefront/src/scss/overrides.scss",
+        "@Storefront",
+        "app/storefront/src/scss/base.scss"
+    ],
+    "script": [
+        "@Storefront",
+        "app/storefront/dist/storefront/js/test-theme.js"
+    ],
+    "asset": [
+        "@Storefront",
+        "app/storefront/src/assets"
+    ],
+    "config": {
+        "tabs": {
+            "colors": {
+                "label": {
+                    "en-GB": "Colours",
+                    "de-DE": "Farben"
+                }
+            }
+        },
+        "blocks": {
+            "exampleBlock": {
+                "label": {
+                    "en-GB": "Example block",
+                    "de-DE": "Beispiel Block"
+                }
+            },
+            "colors": {
+                "themeColors": {
+                    "en-GB": "Theme colours",
+                    "de-DE": "Theme Farben"
+                }
+            }
+        },
+        "sections": {
+            "exampleSection": {
+                "label": {
+                    "en-GB": "Example section",
+                    "de-DE": "Beispiel Sektion"
+                }
+            },
+            "importantColors": {
+                "label": {
+                    "en-GB": "Important colors",
+                    "de-DE": "Wichtige Farben"
+                }
+            }
+        },
+        "fields": {
+            "my-single-select-field": {
+                "label": {
+                    "en-GB": "Select a font size",
+                    "de-DE": "Wähle ein Schriftgröße"
+                },
+                "type": "text",
+                "value": "24",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "16",
+                            "label": {
+                                "en-GB": "16px",
+                                "de-DE": "16px"
+                            }
+                        },
+                        {
+                            "value": "20",
+                            "label": {
+                                "en-GB": "20px",
+                                "de-DE": "20px"
+                            }
+                        },
+                        {
+                            "value": "24",
+                            "label": {
+                                "en-GB": "24px",
+                                "de-DE": "24px"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "block": "exampleBlock",
+                "section": "exampleSection"
+            },
+            "modal-padding": {
+                "label": {
+                    "en-GB": "Modal padding",
+                    "de-DE": "Modal padding in DE"
+                },
+                "type": "text",
+                "value": "(0, 0, 0, 0)",
+                "editable": true
+            },
+            "visible-slides": {
+                "label": {
+                    "en-GB": "Number",
+                    "de-DE": "Number in DE"
+                },
+                "type": "number",
+                "custom": {
+                    "numberType": "int",
+                    "min": 1,
+                    "max": 6
+                },
+                "value": 3,
+                "editable": true
+            },
+            "navigation-fixed": {
+                "label": {
+                    "en-GB": "Navigation",
+                    "de-DE": "Navigation in DE"
+                },
+                "type": "switch",
+                "value": true,
+                "editable": true
+            },
+            "sw-color-brand-primary": {
+                "label": {
+                    "en-GB": "Primary colour",
+                    "de-DE": "Primär"
+                },
+                "type": "color",
+                "value": "#399",
+                "editable": true,
+                "tab": "colors",
+                "block": "themeColors",
+                "section": "importantColors"
+            }
+        }
+    }
+}

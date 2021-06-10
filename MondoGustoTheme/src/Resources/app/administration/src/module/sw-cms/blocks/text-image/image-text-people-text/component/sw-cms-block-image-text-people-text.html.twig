@@ -1,0 +1,14 @@
+{% block sw_cms_block_image_text_people_text %}
+    <div class="sw-cms-block-image-text-people-gallery">
+        <div class="sw-cms-block-image-text-people-gallery-col">
+            <slot name="image_first">{% block sw_cms_block_image_text_people_text_image_first %}{% endblock %}</slot>
+            <slot name="text_first">{% block sw_cms_block_image_text_people_text_content_first %}{% endblock %}</slot>
+        </div>
+        <div class="sw-cms-block-image-text-people-gallery-col">
+            <slot name="image_second">{% block sw_cms_block_image_text_people_text_image_second %}{% endblock %}</slot>
+        </div>
+        <div class="sw-cms-block-image-text-people-gallery-col">
+            <slot name="text_third">{% block sw_cms_block_image_text_people_text_content_third %}{% endblock %}</slot>
+        </div>
+    </div>
+{% endblock %}

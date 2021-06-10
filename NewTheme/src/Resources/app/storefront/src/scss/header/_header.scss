@@ -1,0 +1,151 @@
+.header-main {
+    background-color: #24303E;
+    position: relative;
+
+    .container {
+        padding-left: 36px;
+    }
+}
+
+.top-bar-nav {
+    font-size: 14px;
+    font-weight: 400;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'OpenSans', sans-serif;
+}
+
+.top-bar-nav:after {
+    content: '';
+    height: 1px;
+    background-color: #303F50;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 39.5px;
+}
+
+.top-bar-info {
+    display: flex;
+    align-items: center;
+}
+
+.top-bar-nav-item {
+    border-left: 1px solid #303F50;
+    line-height: 19px;
+    padding: 0 16px 0 6px;
+    color: #FFFFFF;
+    margin-right: 0;
+    font-size: 14px;
+
+    &:first-child {
+        border-left: 0;
+        padding: 6px 16px 6px 6px;
+    }
+
+    &:nth-child(2) {
+        padding: 6px 15px 6px 17px;
+    }
+
+    &:nth-child(3) {
+        padding: 6px 15px 6px 15px;
+    }
+
+    &:nth-child(4) {
+        padding: 6px 16px 6px 14px;
+    }
+
+    &:nth-child(5) {
+        padding: 6px 0 6px 14px;
+    }
+
+    img {
+        display: inline-block;
+        margin-right: 5px;
+    }
+}
+
+.top-bar-language {
+    border-left: 1px solid #303F50;
+}
+
+.top-bar-menu {
+    display: flex;
+}
+
+.header-row {
+    height: 80px;
+
+    .col-auto {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    .col-auto:last-child {
+        margin-right: 0;
+    }
+}
+
+.header-search-form {
+    width: 447px;
+    height: 40px;
+}
+
+.header-actions-col {
+    color: #FFFFFF;
+
+    .icon {
+        color: #FFFFFF;
+    }
+}
+
+.header-actions-text {
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.header-cart-total {
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 0;
+    text-align: right;
+    font-weight: normal;
+}
+
+.top-bar-nav-text {
+    color: #FFFFFF;
+}
+
+.top-bar-nav-btn.btn {
+    color: #FFFFFF;
+}
+
+.header-cart-icon {
+    display: inline-block;
+    padding-right: 12px;
+}
+
+.header-cart-btn {
+    display: flex;
+}
+
+.cart-text {
+    color: #FFFFFF;
+}
+
+.header-actions-text-cart {
+    text-align: right;
+}
+
+.header-cart .header-cart-badge {
+    display: inline-block;
+    background-color: red;
+    right: 65px;
+}
+
+.icon-search {
+    transform: scaleX(-1);
+    color: #24303E;
+}

@@ -1,0 +1,24 @@
+{% sw_extends '@Storefront/storefront/component/product/listing.html.twig' %}
+
+{% block element_product_listing_row %}
+    <h2>Custom listing</h2>
+    <div class="row">
+        {% for product in searchResult %}
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="card custom-card">
+                    <div class="card-header">
+                        {% sw_thumbnails 'thumb' with {
+                            media: product.cover.media
+                        } %}
+                    </div>
+                    <div class="card-body">
+                        <h2>{{ product.translated.name }}</h2>
+                        <a href="{{ path("frontend.detail.page", {"productId": product.id}) }}" class="btn btn-primary btn-block">
+                            Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

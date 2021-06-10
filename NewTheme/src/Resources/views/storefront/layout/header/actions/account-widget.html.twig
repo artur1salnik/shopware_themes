@@ -1,0 +1,18 @@
+{% sw_extends '@Storefront/storefront/layout/header/actions/account-widget.html.twig' %}
+
+{% block layout_header_actions_account_widget_dropdown_button %}
+    <button class="btn account-menu-btn header-actions-btn"
+            type="button"
+            id="accountWidget"
+            data-offcanvas-account-menu="true"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-label="{{ "account.myAccount"|trans|striptags }}"
+            title="{{ "account.myAccount"|trans|striptags }}">
+        {% sw_icon 'avatar' style {'size': 'lg'} %}
+{#        <svg xmlns="http://www.w3.org/2000/svg" width="29" height="30" viewBox="0 0 29 30" fill="none">#}
+{#            <path d="M24.7531 19.3934C23.1738 17.7596 21.294 16.5502 19.243 15.8181C21.4397 14.253 22.8828 11.6337 22.8828 8.67188C22.8828 3.89021 19.1223 0 14.5 0C9.87773 0 6.11719 3.89021 6.11719 8.67188C6.11719 11.6337 7.56033 14.253 9.75703 15.8181C7.70607 16.5502 5.82628 17.7596 4.24697 19.3934C1.50828 22.2265 0 25.9934 0 30H2.26562C2.26562 23.0213 7.75393 17.3438 14.5 17.3438C21.2461 17.3438 26.7344 23.0213 26.7344 30H29C29 25.9934 27.4917 22.2265 24.7531 19.3934ZM14.5 15C11.127 15 8.38281 12.1613 8.38281 8.67188C8.38281 5.1825 11.127 2.34375 14.5 2.34375C17.873 2.34375 20.6172 5.1825 20.6172 8.67188C20.6172 12.1613 17.873 15 14.5 15Z" fill="white"/>#}
+{#        </svg>#}
+    </button>
+{% endblock %}

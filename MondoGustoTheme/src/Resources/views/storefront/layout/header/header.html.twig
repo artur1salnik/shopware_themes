@@ -1,0 +1,13 @@
+{% sw_extends '@Storefront/storefront/layout/header/header.html.twig' %}
+
+{% block layout_header_actions_account %}
+    {{ parent() }}
+    <div class="col-auto">
+        <div class="wishlist">
+            <img class="header-actions-btn-image"
+                 src="{{ asset('bundles/mondogustotheme/assets/icons/header/header_action_heart.png', 'asset') }}"
+                 alt="wishlist icon"
+            >
+        </div>
+    </div>
+{% endblock %}

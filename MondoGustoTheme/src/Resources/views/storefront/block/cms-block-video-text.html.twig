@@ -1,0 +1,23 @@
+{% block cms_block_video_text %}
+    <div class="cms-block-video-text">
+        {% block cms_block_video_text_video %}
+            {% set element = block.slots.getSlot('video_content') %}
+            <div class="cms-block-video-text-video" data-cms-element-id="{{ id }}">
+                {% if element.config.url.value %}
+                    <video playsinline autoplay muted loop>
+                        <source src="{{ element.config.url.value }}">
+                    </video>
+                    {% else %}
+                        {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+                {% endif %}
+            </div>
+        {% endblock %}
+
+        {% block cms_block_video_text_text %}
+            {% set element = block.slots.getSlot('text_content') %}
+            <div class="cms-block-video-text-text" data-cms-element-id="{{ id }}">
+                {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+            </div>
+        {% endblock %}
+    </div>
+{% endblock %}

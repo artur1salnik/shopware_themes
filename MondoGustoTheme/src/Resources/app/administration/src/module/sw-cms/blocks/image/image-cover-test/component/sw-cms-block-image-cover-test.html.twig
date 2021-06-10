@@ -1,0 +1,12 @@
+{% block sw_cms_block_image_cover_test %}
+    <div class="sw-cms-block-image-cover-test">
+        <div class="sw-cms-block-image-cover-test-col">
+            <h2>Desktop version</h2>
+            <slot name="desktop">{% block sw_cms_block_image_cover_test_top %}{% endblock %}</slot>
+        </div>
+        <div class="sw-cms-block-image-cover-test-col">
+            <h2>Mobile version</h2>
+            <slot name="mobile">{% block sw_cms_block_image_cover_test_bottom %}{% endblock %}</slot>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,79 @@
+.block-pet-types {
+    height: 650px;
+    display: flex;
+    .pet-types-left {
+        width: 700px;
+        .cms-image {
+            margin: 0 auto;
+        }
+    }
+    .pet-types-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 85px;
+    }
+    .pet-types-right-text {
+        h2 {
+            text-align: left;
+            font-size: 50px;
+            font-weight: 100;
+            color: #3a3e4a;
+            margin-bottom: 40px;
+            max-width: 600px;
+            line-height: 52px;
+            font-family: "Lato", sans-serif;
+        }
+        h3 {
+            text-align: left;
+            color: #879200;
+            font-weight: bold;
+            font-size: 35px;
+            margin-bottom: 40px;
+            font-family: "Lato", sans-serif;
+        }
+    }
+    .pet-types-right-categories {
+        display: flex;
+        .pet-types-right-category {
+            width: 206px;
+            height: 206px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 15px;
+            box-shadow: 0 0 50px 0 rgba(0, 0, 0, 16%);
+            text-decoration: none;
+            transition: all .3s;
+            .pet-types-right-category-image {
+                margin-bottom: 20px;
+                margin-top: 60px;
+            }
+            .cms-image {
+                height: 70px;
+                width: 70px;
+            }
+            .pet-types-right-category-text {
+                p {
+                    font-size: 15px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: #3a3e4a;
+                }
+            }
+        }
+        .pet-types-right-category:hover {
+            background-color: #879200;
+            transition: all .3s;
+            .pet-types-right-category-text p {
+                color: #FFF;
+            }
+            .cms-image {
+                filter: brightness(0) invert(1);
+            }
+        }
+        .pet-types-right-category:last-child {
+            margin-right: 0;
+        }
+    }
+}

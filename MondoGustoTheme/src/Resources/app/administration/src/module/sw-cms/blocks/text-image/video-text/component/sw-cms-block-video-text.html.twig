@@ -1,0 +1,6 @@
+{% block sw_cms_block_video_text %}
+    <div class="sw-cms-block-video-text">
+        <slot name="video_content">{% block sw_cms_block_video_text_video %}{% endblock %}</slot>
+        <slot name="text_content">{% block sw_cms_block_video_text_text %}{% endblock %}</slot>
+    </div>
+{% endblock %}

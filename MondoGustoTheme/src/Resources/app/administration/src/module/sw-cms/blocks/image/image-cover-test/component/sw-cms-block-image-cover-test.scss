@@ -1,0 +1,16 @@
+.sw-cms-block-image-cover-test {
+    display: grid;
+    grid-template-columns: 1.5fr .5fr;
+    grid-gap: 20px;
+    .sw-cms-slot {
+        height: auto;
+    }
+    img {
+        height: 340px;
+        width: 100%;
+    }
+    h2 {
+        display: flex;
+        justify-content: center;
+    }
+}

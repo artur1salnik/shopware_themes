@@ -1,0 +1,89 @@
+{% sw_extends '@Storefront/storefront/layout/footer/footer.html.twig' %}
+
+{% block layout_footer_inner_container %}
+    {% block layout_footer_navigation %}
+        <div id="footerColumns"
+             class="row footer-columns"
+             data-collapse-footer="true">
+            {% block layout_footer_navigation_hotline %}
+                <div class="col-md-4 footer-column js-footer-column">
+                    {% block layout_footer_navigation_hotline_headline %}
+                        <div
+                            class="footer-column-headline footer-headline js-footer-column-headline js-collapse-footer-column-trigger"
+                            id="collapseFooterHotlineTitle"
+                            data-target="#collapseFooterHotline"
+                            aria-expanded="true"
+                            aria-controls="collapseFooterHotline">
+                            {{ 'footer.serviceHotlineHeadline'|trans|sw_sanitize }}
+                        </div>
+                    {% endblock %}
+
+                    {% block layout_footer_navigation_hotline_content %}
+                        <div id="collapseFooterHotline"
+                             class="footer-column-content collapse js-footer-column-content footer-contact"
+                             aria-labelledby="collapseFooterHotlineTitle">
+                            <div class="footer-column-content-inner">
+                                <div class="footer-contact-hotline">
+                                    <div class="footer-contact-content">
+                                        <div class="footer-contact-phone">
+                                            {{ 'footer.phone'|trans|sw_sanitize }}
+                                        </div>
+                                        <div class="footer-contact-hours">
+                                            {{ 'footer.workingHours'|trans|sw_sanitize }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="footer-guarantee">
+                                    <img class="footer-guarantee-image" src="{{ 'footer.guaranteeImage'|trans|sw_sanitize }}" alt="guarantee image">
+                                    <div class="footer-guarantee-content">
+                                        <div class="footer-guarantee-title">
+                                            {{ 'footer.guaranteeTitle'|trans|sw_sanitize }}
+                                        </div>
+                                        <div class="footer-guarantee-text">
+                                            {{ 'footer.guaranteeText'|trans|sw_sanitize }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endblock %}
+                </div>
+            {% endblock %}
+
+            {% block layout_footer_navigation_columns %}
+                {% for root in page.footer.navigation.tree %}
+                    {% block layout_footer_navigation_column %}
+                        <div class="col-md-2 footer-column js-footer-column">
+                            {% block layout_footer_navigation_information_headline %}
+                                {{ parent() }}
+                            {% endblock %}
+
+                            {% block layout_footer_navigation_information_content %}
+                                {{ parent() }}
+                            {% endblock %}
+                        </div>
+                    {% endblock %}
+                {% endfor %}
+                <div class="col-md-4 footer-column js-footer-column">
+                    <div class="footer-column-headline footer-headline footer-payment-labels">
+                        {{ 'footer.paymentMethods'|trans|sw_sanitize }}
+                    </div>
+                    <div class="footer-column-content-inner">
+                        <div class="footer-payment-methods">
+                            {% set i = shopware.theme %}
+                            <img class="payment-method-logo" src="{{ i.paymentMethod_1 }}" alt="payment method logo">
+                            <img class="payment-method-logo" src="{{ i.paymentMethod_2 }}" alt="payment method logo">
+                            <img class="payment-method-logo" src="{{ i.paymentMethod_3 }}" alt="payment method logo">
+                            <img class="payment-method-logo" src="{{ i.paymentMethod_4 }}" alt="payment method logo">
+                            <img class="payment-method-logo" src="{{ i.paymentMethod_5 }}" alt="payment method logo">
+                            <img class="payment-method-logo" src="{{ i.paymentMethod_6 }}" alt="payment method logo">
+                            <img class="payment-method-logo" src="{{ i.paymentMethod_7 }}" alt="payment method logo">
+                            <img class="payment-method-logo" src="{{ i.paymentMethod_8 }}" alt="payment method logo">
+                        </div>
+                    </div>
+                </div>
+            {% endblock %}
+        </div>
+    {% endblock %}
+{% endblock %}
+

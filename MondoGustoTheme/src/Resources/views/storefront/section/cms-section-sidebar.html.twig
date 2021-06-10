@@ -1,0 +1,44 @@
+{% sw_extends '@Storefront/storefront/section/cms-section-sidebar.html.twig' %}
+
+{% block section_main_content %}
+    <div class="cms-section-sidebar-main-content col-lg-8 col-xl-9">
+        <div class="breadcrumb cms-breadcrumb cms-breadcrump container">
+            {% block cms_breadcrumb %}
+                {# @deprecated tag:v6.4.0 parameter `navigationTree` will be removed #}
+                {% sw_include '@Storefront/storefront/component/listing/breadcrumb.html.twig' with {
+                    context: context,
+                    navigationTree: page.header.navigation.tree,
+                    category: page.header.navigation.active
+                } only %}
+            {% endblock %}
+        </div>
+
+        <div class="current-category">
+            <h2 class="current-category-title">
+                {{ page.header.navigation.active.translated.name }}
+            </h2>
+            <div class="current-category-subcategories">
+                {% for category in page.header.navigation.tree %}
+                    {% for subcategory in category.children %}
+                        {% if subcategory.category.parentId == page.header.navigation.active.id %}
+                            <a class="current-category-subcategory">
+                                {{ subcategory.category.translated.name }}
+                            </a>
+                        {% endif %}
+                        {% for s in subcategory.children %}
+                            <a class="current-category-subcategory">
+                                {{ s.category.translated.name }}
+                            </a>
+                        {% endfor %}
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+
+        {% for block in mainContentBlocks %}
+            {% block section_main_content_block %}
+                {% sw_include "@Storefront/storefront/section/cms-section-block-container.html.twig" %}
+            {% endblock %}
+        {% endfor %}
+    </div>
+{% endblock %}

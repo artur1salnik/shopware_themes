@@ -1,0 +1,114 @@
+.footer-main {
+    background-color: $element-bg;
+    height: 240px;
+    border-top: none;
+    .footer-column-headline {
+        font-size: 15px;
+        line-height: 19px;
+        color: $text-color;
+        font-weight: 700;
+        padding-top: 15px;
+    }
+    .footer-column-content-inner {
+        padding: 0;
+        &:first-child {
+            width: 355px;
+        }
+        &:last-child, &:last-child {
+            width: 355px;
+        }
+    }
+    .payment-method-logo {
+        max-width: 80px;
+        max-height: 40px;
+        border-radius: 5px;
+    }
+    .footer-contact-hotline {
+        display: flex;
+        align-items: center;
+        margin-bottom: 50px;
+        &:before {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 30px;
+            margin-right: 20px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url('../assets/icons/footer/phone_icon.png');
+        }
+    }
+    .footer-contact-phone {
+        font-size: 15px;
+        line-height: 19px;
+        font-weight: 700;
+        color: #690622;
+    }
+    .footer-contact-hours {
+        font-size: 9px;
+        line-height: 11px;
+    }
+    .footer-guarantee {
+        display: flex;
+        align-items: center;
+        &-image {
+            max-height: 50px;
+            max-width: 50px;
+            margin-right: 10px;
+        }
+        &-title {
+            font-size: 11px;
+            line-height: 14px;
+            font-weight: 700;
+        }
+        &-text {
+            font-size: 9px;
+            line-height: 11px;
+        }
+    }
+    .footer-link-item {
+        font-size: 11px;
+        line-height: 14px;
+        padding: 10px 0 0 0;
+        &:first-child {
+            padding-top: 0;
+        }
+        .footer-link {
+            color: $text-color;
+        }
+        &:hover .footer-link {
+            color: $text-color;
+        }
+    }
+    .footer-payment-methods {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: 100px;
+    }
+}
+
+.footer-bottom {
+    background-color: $text-color;
+    height: 47px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .footer-vat {
+        font-size: 9px;
+        line-height: 11px;
+        color: #FFFFFF;
+        p {
+            margin-bottom: 0;
+            a {
+                color: #FFFFFF;
+            }
+        }
+    }
+    .footer-copyright {
+        font-size: 9px;
+        line-height: 11px;
+        color: #FFFFFF;
+        margin-top: 5px;
+    }
+}

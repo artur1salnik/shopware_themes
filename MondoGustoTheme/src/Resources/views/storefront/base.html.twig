@@ -1,0 +1,57 @@
+{% sw_extends '@Storefront/storefront/base.html.twig' %}
+
+{% block base_header %}
+    {% if context.salesChannel.translated.customFields.custom_top_header_text %}
+        <div class="header-top-block">
+            <div class="header-top-block-text" data-anime-plugin>
+                {{ context.salesChannel.translated.customFields.custom_top_header_text }}
+            </div>
+        </div>
+    {% endif %}
+    <div class="container">
+        <div class="header-top-info">
+            <div class="header-top-info-item">{{ 'header.freeShipping'|trans|sw_sanitize }}</div>
+            <div class="header-top-info-item">{{ 'header.bonusPoints'|trans|sw_sanitize }}</div>
+            <div class="header-top-info-item">{{ 'header.handpicked'|trans|sw_sanitize }}</div>
+        </div>
+    </div>
+    <header class="header-main">
+        {% block base_header_inner %}
+            <div class="container">
+                {% sw_include '@Storefront/storefront/layout/header/header.html.twig' %}
+            </div>
+        {% endblock %}
+    </header>
+    {% endblock %}
+
+{% block base_footer %}
+    {{ parent() }}
+    {% block layout_footer_bottom %}
+        <div class="footer-bottom">
+
+            {% block layout_footer_vat %}
+                <div class="footer-vat">
+                    {% if context.taxState == "gross" %}
+                        <p>
+                            {{ "footer.includeVat"|trans({
+                                '%url%': path('frontend.cms.page',{ id: shopware.config.core.basicInformation.shippingPaymentInfoPage })
+                            })|raw }}
+                        </p>
+                    {% else %}
+                        <p>
+                            {{ "footer.excludeVat"|trans({
+                                '%url%': path('frontend.cms.page',{ id: shopware.config.core.basicInformation.shippingPaymentInfoPage })
+                            })|raw }}
+                        </p>
+                    {% endif %}
+                </div>
+            {% endblock %}
+
+            {% block layout_footer_copyright %}
+                <div class="footer-copyright">
+                    {{ "footer.copyrightInfo"|trans|sw_sanitize }}
+                </div>
+            {% endblock %}
+        </div>
+    {% endblock %}
+{% endblock %}

@@ -1,0 +1,15 @@
+{% block block_image_cover %}
+    {% block block_image_cover_desktop %}
+        {% set element = block.slots.getSlot('desktop') %}
+        <div class="col-12 cover-desktop d-none d-md-block" data-cms-element-id="{{ id }}">
+                {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+        </div>
+    {% endblock %}
+
+    {% block block_image_cover_mobile %}
+        {% set element = block.slots.getSlot('mobile') %}
+        <div class="col-12 cover-mobile d-sm-block d-md-none" data-cms-element-id="{{ id }}">
+                {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+        </div>
+    {% endblock %}
+{% endblock %}

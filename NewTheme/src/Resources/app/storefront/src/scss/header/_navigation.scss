@@ -1,0 +1,140 @@
+.main-navigation {
+    background-color: #1D1D1D;
+    height: 48px;
+    //display: flex;
+    //align-items: center;
+
+    .home-link {
+        display: none;
+    }
+
+    .container {
+        height: 100%;
+    }
+}
+
+.main-navigation-menu {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.main-navigation-link {
+    display: inline-block;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    padding-left: 10px;
+    padding-right: 15px;
+    height: 48px;
+
+    &:hover, &.active {
+        .main-navigation-link-text {
+            background-color: #1D9AD7;
+            color: #FFFFFF;
+            padding: 5px 5px;
+            border-radius: 15px;
+        }
+    }
+
+    &:nth-child(7) {
+        .main-navigation-link-text:before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url('../assets/icons/rabbit.svg');
+        }
+    }
+
+    &:nth-child(8) {
+        background-color: #FF9600;
+        transform: skew(336deg);
+
+        .main-navigation-link-text:before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url('../assets/icons/setting-icon.svg');
+        }
+    }
+
+    &:nth-child(8) .main-navigation-link-text {
+        transform: skew(24deg);
+    }
+
+    &:nth-child(9) {
+        background-color: #008C8C;
+        transform: skew(336deg);
+
+        .main-navigation-link-text:before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url('../assets/icons/icon-clock.svg');
+        }
+    }
+
+    &:nth-child(9) .main-navigation-link-text {
+        transform: skew(24deg);
+    }
+
+    &:nth-child(10) {
+        background-color: #009FE3;
+        transform: skew(336deg);
+
+        .main-navigation-link-text:before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url('../assets/icons/express-delivery-icon.svg');
+        }
+    }
+
+    &:nth-child(10) .main-navigation-link-text {
+        transform: skew(24deg);
+    }
+
+    &:nth-child(11) {
+        background-color: #4D6A6D;
+        transform: skew(336deg);
+        z-index: 2;
+
+        .main-navigation-link-text:before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url('../assets/icons/help-icon.svg');
+        }
+    }
+
+    &:nth-child(11) .main-navigation-link-text {
+        transform: skew(24deg);
+    }
+}
+
+.main-navigation-link-text {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.main-navigation-link .main-navigation-link-text {
+    border-bottom: none;
+    padding-bottom: 0;
+}

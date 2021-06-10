@@ -1,0 +1,25 @@
+{% sw_extends '@Storefront/storefront/component/product/listing.html.twig' %}
+
+{#{% block product_listing %}#}
+{% block element_product_listing_row %}
+    <template data-test-theme-plugin></template>
+    <div>
+        <img src="{{ asset('bundles/testtheme/heineken.jpg', 'asset') }}" alt="" style="height: 20%; width: 100%">
+    </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            {% for product in searchResult.elements %}
+                <div class="swiper-slide">
+                    {% sw_include '@Storefront/storefront/component/product/card/box.html.twig' with {
+                        'layout': boxLayout,
+                        'displayMode': displayMode
+                    } %}
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+{% endblock %}

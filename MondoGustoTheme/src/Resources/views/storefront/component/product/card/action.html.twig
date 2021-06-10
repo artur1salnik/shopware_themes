@@ -1,0 +1,9 @@
+{% sw_extends '@Storefront/storefront/component/product/card/action.html.twig' %}
+
+{% block page_product_detail_product_buy_button %}
+    <button class="btn btn-block btn-buy"
+            title="{{ "listing.boxAddProduct"|trans|striptags }}">
+        <img class="btn-buy-icon cart-icon" src="{{ asset('bundles/mondogustotheme/assets/icons/product/btn_listing_cart.png', 'asset') }}" alt="cart-icon">
+        <img class="btn-buy-icon done-icon hidden" src="{{ asset('bundles/mondogustotheme/assets/icons/product/tick.svg', 'asset') }}" alt="cart-icon">
+    </button>
+{% endblock %}

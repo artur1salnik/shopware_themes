@@ -1,0 +1,92 @@
+{
+    "name": "RueppelTheme",
+    "author": "Shopware AG",
+    "views": [
+        "@Storefront",
+        "@Plugins",
+        "@RueppelTheme"
+    ],
+    "style": [
+        "app/storefront/src/scss/overrides.scss",
+        "@Storefront",
+        "app/storefront/src/scss/base.scss"
+    ],
+    "script": [
+        "@Storefront",
+        "app/storefront/dist/storefront/js/rueppel-theme.js"
+    ],
+    "asset": [
+        "@Storefront",
+        "app/storefront/src/assets"
+    ],
+    "config": {
+        "tabs": {
+            "mediaTab": {
+                "label": {
+                    "en-GB": "Media",
+                    "de-DE": "Medien"
+                }
+            }
+        },
+        "blocks": {
+            "mediaSelectionBlock": {
+                "label": {
+                    "en-GB": "Media Selection",
+                    "de-DE": "Medienauswahl"
+                }
+            }
+        },
+        "fields": {
+            "mediaSelectionField_1": {
+                "label": {
+                    "en-GB": "Image 1",
+                    "de-DE": "Bild 1"
+                },
+                "type": "media",
+                "editable": true,
+                "tab": "mediaTab",
+                "block": "mediaSelectionBlock"
+            },
+            "mediaSelectionField_2": {
+                "label": {
+                    "en-GB": "Media 2",
+                    "de-DE": "Bild 2"
+                },
+                "type": "media",
+                "editable": true,
+                "tab": "mediaTab",
+                "block": "mediaSelectionBlock"
+            },
+            "mediaSelectionField_3": {
+                "label": {
+                    "en-GB": "Media 3",
+                    "de-DE": "Bild 3"
+                },
+                "type": "media",
+                "editable": true,
+                "tab": "mediaTab",
+                "block": "mediaSelectionBlock"
+            },
+            "mediaSelectionField_4": {
+                "label": {
+                    "en-GB": "Media 4",
+                    "de-DE": "Bild 4"
+                },
+                "type": "media",
+                "editable": true,
+                "tab": "mediaTab",
+                "block": "mediaSelectionBlock"
+            },
+            "mediaSelectionField_5": {
+                "label": {
+                    "en-GB": "Media 5",
+                    "de-DE": "Bild 5"
+                },
+                "type": "media",
+                "editable": true,
+                "tab": "mediaTab",
+                "block": "mediaSelectionBlock"
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{% sw_extends '@Storefront/storefront/layout/footer/footer.html.twig' %}
+
+{% block layout_footer_navigation_hotline %}
+    <div class="footer-image">
+        <img src="{{ asset('bundles/rueppeltheme/sea.jpg', 'asset') }}" alt="">
+    </div>
+{% endblock %}
+
+{% block layout_footer_bottom %}
+    <div class="payment-systems-logos col-sm-12">
+        <img src="{{ shopware.theme['mediaSelectionField_1'] |sw_encode_url }}" alt="">
+        <img src="{{ shopware.theme['mediaSelectionField_2'] |sw_encode_url }}" alt="">
+        <img src="{{ shopware.theme['mediaSelectionField_3'] |sw_encode_url }}" alt="">
+        <img src="{{ shopware.theme['mediaSelectionField_4'] |sw_encode_url }}" alt="">
+        <img src="{{ shopware.theme['mediaSelectionField_5'] |sw_encode_url }}" alt="">
+    </div>
+    {{ parent() }}
+{% endblock %}

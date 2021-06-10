@@ -1,0 +1,63 @@
+{% sw_extends '@Storefront/storefront/layout/header/header.html.twig' %}
+
+{% block layout_header_actions_account %}
+    <div class="col-auto">
+        <a href="#" class="btn header-actions-btn">
+            {% sw_icon 'heart' style {'size': 'lg'} %}
+        </a>
+        <div class="header-actions-text">
+            {{ 'headerActions.wishList'|trans|upper|sw_sanitize }}
+        </div>
+    </div>
+    <div class="col-auto">
+        <div class="account-menu">
+            {% sw_include '@Storefront/storefront/layout/header/actions/account-widget.html.twig' %}
+        </div>
+        <div class="header-actions-text">
+            {{ 'headerActions.account'|trans|upper|sw_sanitize }}
+        </div>
+    </div>
+    <div class="col-auto">
+        <a href="#" class="btn header-actions-btn">
+            {% sw_icon 'log-in'  style {'size': 'lg'}  %}
+        </a>
+        <div class="header-actions-text">
+            {{ 'headerActions.B2Bsphere'|trans|upper|sw_sanitize }}
+        </div>
+    </div>
+
+{#     <div class="col-auto"> #}
+    {# <a href="#" class="btn header-actions-btn"> #}
+    {# <svg xmlns="http://www.w3.org/2000/svg" width="34" height="30" viewBox="0 0 34 30" fill="none"> #}
+    {# <path d="M31.0054 2.95103C29.2492 1.05114 26.84 0 24.222 0C22.2633 0 20.4679 0.620239 18.8879 1.84113C18.1371 2.4222 17.4516 3.12731 16.8444 3.94342C16.2372 3.12731 15.5517 2.4222 14.8009 1.84113C13.2209 0.620239 11.4255 0 9.46681 0C6.84875 0 4.43961 1.05114 2.68335 2.95103C0.95321 4.83134 0 7.39717 0 10.1785C0 13.0381 1.0642 15.6496 3.34276 18.4048C5.37323 20.8531 8.28509 23.3341 11.654 26.2067L11.6605 26.2133C12.803 27.1861 14.1023 28.2894 15.4603 29.4842C15.839 29.8172 16.3286 30 16.8379 30C17.3471 30 17.8368 29.8172 18.2155 29.4842C19.593 28.2829 20.938 27.1338 22.0218 26.2067C25.3906 23.3341 28.3025 20.8531 30.333 18.4048C32.6181 15.6496 33.6757 13.0381 33.6757 10.1785C33.6888 7.39717 32.7356 4.83134 31.0054 2.95103ZM9.46681 2.2198C10.9227 2.2198 12.2612 2.68335 13.4429 3.59739C14.5005 4.41349 15.2383 5.45158 15.6692 6.17628C15.9173 6.59412 16.3547 6.84222 16.8444 6.84222C17.3341 6.84222 17.7715 6.59412 18.0196 6.17628C18.4505 5.45158 19.1882 4.41349 20.2459 3.59739C21.4276 2.68335 22.7661 2.2198 24.222 2.2198C26.2133 2.2198 28.0413 3.01632 29.3732 4.4592C30.7247 5.92818 31.469 7.95865 31.469 10.1785C31.469 12.5223 30.5941 14.6246 28.6355 16.988C26.7291 19.2862 23.889 21.7084 20.5985 24.5158L20.5919 24.5223C19.5277 25.4298 18.2155 26.5462 16.8444 27.741C15.5125 26.5789 14.2394 25.4886 13.1099 24.5288L13.1034 24.5223C9.81284 21.7149 6.96627 19.2927 5.05985 16.988C3.09467 14.6246 2.2198 12.5223 2.2198 10.1785C2.2198 7.95865 2.96409 5.92818 4.31556 4.4592C5.64744 3.01632 7.47552 2.2198 9.46681 2.2198Z" fill="white"/> #}
+    {# </svg> #}
+    {# </a> #}
+    {# </div> #}
+    {# <div class="col-auto"> #}
+    {# <div class="account-menu"> #}
+    {# {% sw_include '@Storefront/storefront/layout/header/actions/account-widget.html.twig' %} #}
+    {# </div> #}
+    {# </div> #}
+    {# <div class="col-auto"> #}
+    {# <a href="#" class="btn header-actions-btn"> #}
+    {# <svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" viewBox="0 0 28 30" fill="none"> #}
+    {# <path d="M1 8.77778V4C1 2.34315 2.34315 1 4 1H24C25.6569 1 27 2.34315 27 4V26C27 27.6569 25.6569 29 24 29H4C2.34315 29 1 27.6569 1 26V21.2222" stroke="white" stroke-width="2"/> #}
+    {# </svg> #}
+    {# </a> #}
+    {# </div> #}
+{% endblock %}
+
+{% block layout_header_actions_cart %}
+    <div class="col-auto">
+        <div class="header-cart"
+             data-offcanvas-cart="true">
+            <a class="btn header-cart-btn header-actions-btn"
+               href="{{ path('frontend.checkout.cart.page') }}"
+               data-cart-widget="true"
+               title="{{ 'checkout.cartTitle'|trans|striptags }}"
+               aria-label="{{ 'checkout.cartTitle'|trans|striptags }}">
+                {% sw_include '@Storefront/storefront/layout/header/actions/cart-widget.html.twig' %}
+            </a>
+        </div>
+    </div>
+{% endblock %}

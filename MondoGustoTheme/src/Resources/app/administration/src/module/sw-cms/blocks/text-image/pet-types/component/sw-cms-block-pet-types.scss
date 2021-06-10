@@ -1,0 +1,41 @@
+.sw-cms-block-pet-types {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    height: 400px;
+    .pet-types-left {
+        height: 400px;
+        .sw-cms-el-image {
+            min-height: 0;
+            img {
+                height: 400px;
+            }
+        }
+    }
+    .pet-types-right {
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+        .pet-types-right-text {
+            margin-bottom: 20px;
+        }
+        .pet-types-right-categories {
+            display: flex;
+            height: 150px;
+            .pet-types-right-category {
+                margin-right: 10px;
+                width: 100%;
+                .sw-cms-el-image {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            .pet-types-right-category:last-child {
+                margin-right: 0;
+            }
+            .sw-cms-el-text {
+                overflow: hidden;
+            }
+        }
+    }
+}

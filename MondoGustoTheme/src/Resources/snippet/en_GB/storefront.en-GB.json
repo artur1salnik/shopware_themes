@@ -1,0 +1,31 @@
+{
+    "header": {
+        "freeShipping": "<div class='header-top-info-text'><b>Free shipping</b> <span class='small-text'>from € 30.00 in Germany</span></div>",
+        "bonusPoints": "<div class='header-top-info-text'><b>Collect loyalty bonus points</b> <span class='small-text'>for subsequent orders</span></div>",
+        "handpicked": "<div class='header-top-info-text'><b>Handpicked</b> <span class='small-text'>selected products & manufacturers</span></div>",
+        "searchPlaceholder": "Enter search term, article number ...",
+        "accountButton": "Main Mondogusto<br><b>Registered!</b>",
+        "cartButton": "Cart"
+    },
+    "footer": {
+        "serviceHotlineHeadline": "We are glad to advise you in person!",
+        "phone": "+49 9565 6176210",
+        "workingHours": "Mo - Fr: 8:00 a.m. - 17:00 p.m.",
+        "paymentMethods": "Pay safely with",
+        "guaranteeTitle": "Refund warranty",
+        "guaranteeText": "Approved online shop with a free money-back guarantee from Trusted Shops. Click on the seal of quality to check the validity.\n",
+        "guaranteeImage": "http://test.com/media/f9/76/17/1621599203/trusted-shops.png",
+        "includeVat": "* alle Preise inkl. MwSt. | zzgl. <a data-toggle=\"modal\" href=\"%url%\" data-url=\"%url%\">Versandkosten</a>",
+        "excludeVat": "* alle Preise exkl. MwSt. | zzgl. <a data-toggle=\"modal\" href=\"%url%\" data-url=\"%url%\">Versandkosten</a>",
+        "copyrightInfo": "© 2021 Mondogusto - alle Rechte vorbehalten"
+    },
+    "sidebar": {
+        "allCategories": "All Categories"
+    },
+    "product": {
+        "inStock": "In stock",
+        "outOfStock": "Out of stock",
+        "deliveryTime": "Delivery time",
+        "ingredients": "Ingredients"
+    }
+}

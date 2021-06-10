@@ -1,0 +1,117 @@
+{% sw_extends '@Storefront/storefront/component/product/card/box-standard.html.twig' %}
+
+
+{% block component_product_box_content %}
+    <div class="card-body" data-aos="fade-up" data-aos-duration="3000">
+        {% block component_product_box_badges %}
+            {% sw_include '@Storefront/storefront/component/product/card/badges.html.twig' %}
+        {% endblock %}
+
+        {% block component_product_box_rich_snippets %}
+            {% sw_include '@Storefront/storefront/component/product/card/meta.html.twig' %}
+        {% endblock %}
+
+        {% block component_product_box_image %}
+            <div class="product-image-wrapper">
+                {# fallback if display mode is not set #}
+                {% set displayMode = displayMode ?: 'standard' %}
+
+                {# set display mode 'cover' for box-image with standard display mode #}
+                {% if layout == 'image' and displayMode == 'standard' %}
+                    {% set displayMode = 'cover' %}
+                {% endif %}
+
+                <a href="{{ seoUrl('frontend.detail.page', {'productId': id}) }}"
+                   title="{{ name }}"
+                   class="product-image-link is-{{ displayMode }}">
+                    {% if cover.url %}
+                        {% set attributes = {
+                            'class': 'product-image is-'~displayMode,
+                            'alt': (cover.translated.alt ?: name),
+                            'title': (cover.translated.title ?: name)
+                        } %}
+
+                        {% if displayMode == 'cover' or displayMode == 'contain' %}
+                            {% set attributes = attributes|merge({ 'data-object-fit': displayMode }) %}
+                        {% endif %}
+
+                        {% sw_thumbnails 'product-image-thumbnails' with {
+                            media: cover,
+                            sizes: {
+                                'xs': '501px',
+                                'sm': '315px',
+                                'md': '427px',
+                                'lg': '333px',
+                                'xl': '284px'
+                            }
+                        } %}
+                    {% else %}
+                        <div class="product-image-placeholder">
+                            {% sw_icon 'placeholder' style {
+                                'size': 'fluid'
+                            } %}
+                        </div>
+                    {% endif %}
+                </a>
+
+                {% if shopware.config.core.cart.wishlistEnabled %}
+                    {% block component_product_box_wishlist_action %}
+                        {% sw_include '@Storefront/storefront/component/product/card/wishlist.html.twig' with {
+                            appearance: 'circle',
+                            productId: id
+                        } %}
+                    {% endblock %}
+                {% endif %}
+
+            </div>
+        {% endblock %}
+
+        {% block component_product_box_info %}
+            <div class="product-info">
+                <div class="product-info-top">
+                    <div class="product-number">{{ product.productNumber }}</div>
+                    <div class="price-unit-content">
+                        {{ product.purchaseUnit }} {{ product.unit.translated.shortCode }}
+                    </div>
+                </div>
+
+                {% block component_product_box_name %}
+                    <a href="{{ seoUrl('frontend.detail.page', {'productId': id}) }}"
+                       class="product-name"
+                       title="{{ name }}">
+                        {{ name }}
+                    </a>
+                    <hr>
+                {% endblock %}
+
+                {% block component_product_box_price %}
+                    {% sw_include '@Storefront/storefront/component/product/card/price-unit.html.twig' %}
+                {% endblock %}
+
+                {% if product.stock %}
+                    <div class="product-info-stock in-stock">
+                        {{ 'product.inStock'|trans|sw_sanitize }}
+                    </div>
+                {% else %}
+                    <div class="product-info-stock out-of-stock">
+                        {{ 'product.outOfStock'|trans|sw_sanitize }}
+                    </div>
+                {% endif %}
+
+                <div class="product-info-delivery-time">
+                    {{ 'product.deliveryTime'|trans|sw_sanitize }}: {{ product.deliveryTime.translated.name }}
+                </div>
+
+                {% block component_product_box_action %}
+                    {% sw_include '@Storefront/storefront/component/product/card/action.html.twig' %}
+                {% endblock %}
+
+                <hr>
+
+                <div class="product-info-ingredients">
+                    <button class="btn btn-ingredients" type="button">{{ 'product.ingredients'|trans|sw_sanitize }}</button>
+                </div>
+            </div>
+        {% endblock %}
+    </div>
+{% endblock %}
